@@ -1,0 +1,110 @@
+2026-04-07 20:49:22.488 INFO  [main] conector.JpaUserRepository - starting JPA repository
+2026-04-07 20:49:22.619 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: my-persistence-unit]
+2026-04-07 20:49:22.662 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-04-07 20:49:22.688 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-07 20:49:22.824 WARN  [main] o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-04-07 20:49:23.021 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:users.db]
+	Database driver: org.sqlite.JDBC
+	Database version: 3.49.1
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-04-07 20:49:23.797 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 20:49:23.812 INFO  [main] o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73bb1337] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-04-07 20:49:24.181 INFO  [main] conector.JpaFilmsRepository - starting JPA repository
+2026-04-07 20:49:24.183 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: my-persistence-unit]
+2026-04-07 20:49:24.186 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-07 20:49:24.197 WARN  [main] o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-04-07 20:49:24.199 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:users.db]
+	Database driver: org.sqlite.JDBC
+	Database version: 3.49.1
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-04-07 20:49:24.219 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 20:49:24.219 INFO  [main] o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@34edd065] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-04-07 20:49:24.225 INFO  [main] conector.JpaUserRepository - Saving user: 
+2026-04-07 20:49:24.235 ERROR [main] conector.JpaUserRepository - error saving user
+org.hibernate.PropertyValueException: not-null property references a null or transient value: conector.UserEntity.chatId
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:112)
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:57)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:126)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.makeEntityManaged(AbstractEntityInsertAction.java:135)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:301)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:261)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:406)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:307)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:223)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at conector.JpaUserRepository.lambda$save$0(JpaUserRepository.java:20)
+	at conector.JpaUserRepository.executeInTransaction(JpaUserRepository.java:51)
+	at conector.JpaUserRepository.save(JpaUserRepository.java:18)
+	at conector.Main.main(Main.java:21)
+2026-04-07 20:49:24.237 INFO  [main] conector.JpaFilmsRepository - closing JPA resources
+2026-04-07 20:49:24.238 INFO  [main] conector.JpaUserRepository - closing JPA resources
+2026-04-07 20:50:23.225 INFO  [main] conector.JpaUserRepository - starting JPA repository
+2026-04-07 20:50:23.304 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: my-persistence-unit]
+2026-04-07 20:50:23.345 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-04-07 20:50:23.370 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-07 20:50:23.500 WARN  [main] o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-04-07 20:50:23.685 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:users.db]
+	Database driver: org.sqlite.JDBC
+	Database version: 3.49.1
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-04-07 20:50:24.416 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 20:50:24.433 INFO  [main] o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3a3b10f4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-04-07 20:50:24.460 INFO  [main] conector.JpaFilmsRepository - starting JPA repository
+2026-04-07 20:50:24.463 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: my-persistence-unit]
+2026-04-07 20:50:24.465 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-07 20:50:24.474 WARN  [main] o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-04-07 20:50:24.475 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:users.db]
+	Database driver: org.sqlite.JDBC
+	Database version: 3.49.1
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-04-07 20:50:24.493 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 20:50:24.494 INFO  [main] o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@44dfdd58] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-04-07 20:50:24.498 INFO  [main] conector.JpaUserRepository - Saving user: 
+2026-04-07 20:50:24.775 INFO  [main] conector.JpaUserRepository - finding user by tgId: 123456
+2026-04-07 20:50:25.035 INFO  [main] conector.JpaFilmsRepository - saving film
+2026-04-07 20:50:28.418 ERROR [main] conector.JpaFilmsRepository - error saving film
+jakarta.persistence.RollbackException: Error while committing the transaction
+	at org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:67)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:104)
+	at conector.JpaFilmsRepository.executeInTransaction(JpaFilmsRepository.java:64)
+	at conector.JpaFilmsRepository.save(JpaFilmsRepository.java:28)
+	at conector.Main.main(Main.java:35)
+Caused by: org.hibernate.TransactionException: Unable to commit against JDBC Connection
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.commit(AbstractLogicalConnectionImplementor.java:97)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:268)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	... 3 common frames omitted
+Caused by: org.sqlite.SQLiteException: [SQLITE_BUSY] The database file is locked (database is locked)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179)
+	at org.sqlite.core.DB.newSQLException(DB.java:1190)
+	at org.sqlite.core.DB.throwex(DB.java:1150)
+	at org.sqlite.core.DB.exec(DB.java:198)
+	at org.sqlite.SQLiteConnection.commit(SQLiteConnection.java:449)
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.commit(AbstractLogicalConnectionImplementor.java:87)
+	... 5 common frames omitted
+2026-04-07 20:50:28.419 INFO  [main] conector.JpaFilmsRepository - closing JPA resources
+2026-04-07 20:50:32.314 INFO  [main] conector.JpaUserRepository - closing JPA resources
