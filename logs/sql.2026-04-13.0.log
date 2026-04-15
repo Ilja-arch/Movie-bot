@@ -1,0 +1,164 @@
+2026-04-08 20:06:09.118 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (chatId, name, userTgId, id) 
+    values
+        (?, ?, ?, ?)
+2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [TestUser]
+2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
+2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (4:BIGINT) <- [1]
+2026-04-08 20:08:20.029 DEBUG [main] org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.chatId,
+        ue1_0.name,
+        ue1_0.userTgId 
+    from
+        users ue1_0 
+    where
+        ue1_0.id=?
+2026-04-08 20:08:20.145 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-08 20:08:20.406 DEBUG [main] org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.chatId,
+        ue1_0.name,
+        ue1_0.userTgId 
+    from
+        users ue1_0 
+    where
+        ue1_0.userTgId=?
+2026-04-08 20:08:20.407 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-08 20:10:31.484 DEBUG [main] org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.chatId,
+        ue1_0.name,
+        ue1_0.userTgId 
+    from
+        users ue1_0 
+    where
+        ue1_0.id=?
+2026-04-08 20:10:31.487 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-08 20:10:31.740 DEBUG [main] org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.chatId,
+        ue1_0.name,
+        ue1_0.userTgId 
+    from
+        users ue1_0 
+    where
+        ue1_0.userTgId=?
+2026-04-08 20:10:31.833 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-08 20:10:31.837 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.id=?
+2026-04-08 20:10:31.838 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-08 20:10:31.839 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.id=?
+2026-04-08 20:10:31.839 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-08 20:12:17.817 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (chatId, name, userTgId) 
+    values
+        (?, ?, ?)
+2026-04-08 20:12:17.819 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-08 20:12:17.820 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [TestUser]
+2026-04-08 20:12:17.820 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
+2026-04-08 20:13:34.694 DEBUG [main] org.hibernate.SQL - 
+    create table films (
+        id integer,
+        originalTitle varchar(255) not null,
+        review integer not null,
+        userId bigint not null,
+        primary key (id)
+    )
+2026-04-08 20:13:34.846 DEBUG [main] org.hibernate.SQL - 
+    create table users (
+        id integer,
+        chatId bigint not null,
+        name varchar(255) not null,
+        userTgId bigint not null,
+        primary key (id)
+    )
+2026-04-08 20:13:34.977 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (chatId, name, userTgId) 
+    values
+        (?, ?, ?)
+2026-04-08 20:13:34.979 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-08 20:13:34.979 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [TestUser]
+2026-04-08 20:13:34.979 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
+2026-04-08 20:13:34.982 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-08 20:13:35.330 DEBUG [main] org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.chatId,
+        ue1_0.name,
+        ue1_0.userTgId 
+    from
+        users ue1_0 
+    where
+        ue1_0.userTgId=?
+2026-04-08 20:13:35.331 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-08 20:13:35.339 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-08 20:13:35.339 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Inception]
+2026-04-08 20:13:35.339 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [9]
+2026-04-08 20:13:35.339 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
+2026-04-08 20:13:35.340 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-08 20:13:35.742 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-08 20:13:35.742 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-08 20:13:35.742 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Inception]
+2026-04-08 20:13:35.744 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=?
+2026-04-08 20:13:35.745 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]

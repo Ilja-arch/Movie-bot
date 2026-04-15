@@ -1,144 +1,67 @@
-2026-04-08 20:06:09.118 DEBUG [main] org.hibernate.SQL - 
-    insert 
-    into
-        users
-        (chatId, name, userTgId, id) 
-    values
-        (?, ?, ?, ?)
-2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
-2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [TestUser]
-2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
-2026-04-08 20:06:09.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (4:BIGINT) <- [1]
-2026-04-08 20:08:20.029 DEBUG [main] org.hibernate.SQL - 
-    select
-        ue1_0.id,
-        ue1_0.chatId,
-        ue1_0.name,
-        ue1_0.userTgId 
-    from
-        users ue1_0 
-    where
-        ue1_0.id=?
-2026-04-08 20:08:20.145 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
-2026-04-08 20:08:20.406 DEBUG [main] org.hibernate.SQL - 
-    select
-        ue1_0.id,
-        ue1_0.chatId,
-        ue1_0.name,
-        ue1_0.userTgId 
-    from
-        users ue1_0 
-    where
-        ue1_0.userTgId=?
-2026-04-08 20:08:20.407 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
-2026-04-08 20:10:31.484 DEBUG [main] org.hibernate.SQL - 
-    select
-        ue1_0.id,
-        ue1_0.chatId,
-        ue1_0.name,
-        ue1_0.userTgId 
-    from
-        users ue1_0 
-    where
-        ue1_0.id=?
-2026-04-08 20:10:31.487 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
-2026-04-08 20:10:31.740 DEBUG [main] org.hibernate.SQL - 
-    select
-        ue1_0.id,
-        ue1_0.chatId,
-        ue1_0.name,
-        ue1_0.userTgId 
-    from
-        users ue1_0 
-    where
-        ue1_0.userTgId=?
-2026-04-08 20:10:31.833 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
-2026-04-08 20:10:31.837 DEBUG [main] org.hibernate.SQL - 
-    select
-        fe1_0.id,
-        fe1_0.originalTitle,
-        fe1_0.review,
-        fe1_0.userId 
-    from
-        films fe1_0 
-    where
-        fe1_0.id=?
-2026-04-08 20:10:31.838 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
-2026-04-08 20:10:31.839 DEBUG [main] org.hibernate.SQL - 
-    select
-        fe1_0.id,
-        fe1_0.originalTitle,
-        fe1_0.review,
-        fe1_0.userId 
-    from
-        films fe1_0 
-    where
-        fe1_0.id=?
-2026-04-08 20:10:31.839 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
-2026-04-08 20:12:17.817 DEBUG [main] org.hibernate.SQL - 
-    insert 
-    into
-        users
-        (chatId, name, userTgId) 
-    values
-        (?, ?, ?)
-2026-04-08 20:12:17.819 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
-2026-04-08 20:12:17.820 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [TestUser]
-2026-04-08 20:12:17.820 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
-2026-04-08 20:13:34.694 DEBUG [main] org.hibernate.SQL - 
-    create table films (
-        id integer,
-        originalTitle varchar(255) not null,
-        review integer not null,
-        userId bigint not null,
-        primary key (id)
-    )
-2026-04-08 20:13:34.846 DEBUG [main] org.hibernate.SQL - 
-    create table users (
-        id integer,
-        chatId bigint not null,
-        name varchar(255) not null,
-        userTgId bigint not null,
-        primary key (id)
-    )
-2026-04-08 20:13:34.977 DEBUG [main] org.hibernate.SQL - 
-    insert 
-    into
-        users
-        (chatId, name, userTgId) 
-    values
-        (?, ?, ?)
-2026-04-08 20:13:34.979 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
-2026-04-08 20:13:34.979 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [TestUser]
-2026-04-08 20:13:34.979 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
-2026-04-08 20:13:34.982 DEBUG [main] org.hibernate.SQL - 
-    select
-        last_insert_rowid()
-2026-04-08 20:13:35.330 DEBUG [main] org.hibernate.SQL - 
-    select
-        ue1_0.id,
-        ue1_0.chatId,
-        ue1_0.name,
-        ue1_0.userTgId 
-    from
-        users ue1_0 
-    where
-        ue1_0.userTgId=?
-2026-04-08 20:13:35.331 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
-2026-04-08 20:13:35.339 DEBUG [main] org.hibernate.SQL - 
+2026-04-15 12:26:47.977 DEBUG [main] org.hibernate.SQL - 
     insert 
     into
         films
         (originalTitle, review, userId) 
     values
         (?, ?, ?)
-2026-04-08 20:13:35.339 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Inception]
-2026-04-08 20:13:35.339 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [9]
-2026-04-08 20:13:35.339 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [123456]
-2026-04-08 20:13:35.340 DEBUG [main] org.hibernate.SQL - 
+2026-04-15 12:26:47.982 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:26:47.982 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:26:47.982 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:26:47.986 DEBUG [main] org.hibernate.SQL - 
     select
         last_insert_rowid()
-2026-04-08 20:13:35.742 DEBUG [main] org.hibernate.SQL - 
+2026-04-15 12:26:48.102 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:26:48.103 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:26:48.104 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:26:48.104 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:26:48.105 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:26:48.196 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:26:48.196 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [The Avengers]
+2026-04-15 12:26:48.197 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:26:48.197 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:26:48.198 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:26:48.275 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (chatId, name, userTgId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:26:48.276 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [23433]
+2026-04-15 12:26:48.276 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ilja]
+2026-04-15 12:26:48.276 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2435]
+2026-04-15 12:26:48.277 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:26:48.619 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=?
+2026-04-15 12:26:48.620 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.021 DEBUG [main] org.hibernate.SQL - 
     select
         fe1_0.id,
         fe1_0.originalTitle,
@@ -149,9 +72,581 @@
     where
         fe1_0.userId=? 
         and fe1_0.originalTitle=?
-2026-04-08 20:13:35.742 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
-2026-04-08 20:13:35.742 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Inception]
-2026-04-08 20:13:35.744 DEBUG [main] org.hibernate.SQL - 
+2026-04-15 12:26:51.021 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.021 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-04-15 12:26:51.023 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.023 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.023 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:26:51.024 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.025 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.025 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:26:51.041 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.041 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.041 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-04-15 12:26:51.042 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.042 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.042 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-04-15 12:26:51.047 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.047 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.047 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-04-15 12:26:51.048 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.048 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.048 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-04-15 12:26:51.048 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.048 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.048 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar]
+2026-04-15 12:26:51.049 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.049 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.049 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-04-15 12:26:51.049 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.049 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.049 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar: The Way of Water]
+2026-04-15 12:26:51.050 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.050 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.050 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Inception]
+2026-04-15 12:26:51.050 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.050 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.051 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future]
+2026-04-15 12:26:51.051 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.051 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.051 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Across the Spider-Verse]
+2026-04-15 12:26:51.051 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.052 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.052 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Wild Robot]
+2026-04-15 12:26:51.052 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.052 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.052 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Star Wars]
+2026-04-15 12:26:51.052 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.053 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.053 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune]
+2026-04-15 12:26:51.053 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.053 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.053 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Mad Max: Fury Road]
+2026-04-15 12:26:51.053 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.054 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.054 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iron Man]
+2026-04-15 12:26:51.054 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.054 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.054 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune: Part Two]
+2026-04-15 12:26:51.054 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.054 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.055 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Into the Spider-Verse]
+2026-04-15 12:26:51.055 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.055 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.055 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Martian]
+2026-04-15 12:26:51.055 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.055 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.055 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 3]
+2026-04-15 12:26:51.056 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.056 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.056 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [2001: A Space Odyssey]
+2026-04-15 12:26:51.056 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.056 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.056 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 2]
+2026-04-15 12:26:51.057 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.057 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.057 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Everything Everywhere All at Once]
+2026-04-15 12:26:51.057 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.058 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.058 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator]
+2026-04-15 12:26:51.058 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.058 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.058 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Empire Strikes Back]
+2026-04-15 12:26:51.059 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.059 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.059 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [E.T. the Extra-Terrestrial]
+2026-04-15 12:26:51.059 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.059 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.059 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ready Player One]
+2026-04-15 12:26:51.060 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.060 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.060 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [X-Men: Days of Future Past]
+2026-04-15 12:26:51.061 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.061 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.061 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Transformers One]
+2026-04-15 12:26:51.061 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.062 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.062 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Captain America: The Winter Soldier]
+2026-04-15 12:26:51.062 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.062 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.062 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy]
+2026-04-15 12:26:51.063 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.063 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.063 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Return of the Jedi]
+2026-04-15 12:26:51.063 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.063 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.063 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Jurassic Park]
+2026-04-15 12:26:51.064 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.064 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.064 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Godzilla vs. Kong]
+2026-04-15 12:26:51.064 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.064 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.064 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future Part II]
+2026-04-15 12:26:51.065 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.065 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.065 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Rogue One: A Star Wars Story]
+2026-04-15 12:26:51.065 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.065 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.065 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Treasure Planet]
+2026-04-15 12:26:51.066 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.066 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.066 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Planet of the Apes]
+2026-04-15 12:26:51.066 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:26:51.066 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:26:51.066 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Nirvanna the Band the Show the Movie]
+2026-04-15 12:27:50.099 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:27:50.101 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:27:50.101 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:27:50.101 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:27:50.161 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:27:50.305 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:27:50.305 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:27:50.305 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:27:50.305 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:27:50.306 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:27:50.399 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:27:50.399 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [The Avengers]
+2026-04-15 12:27:50.399 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:27:50.399 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:27:50.400 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:27:50.497 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (chatId, name, userTgId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:27:50.498 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [23433]
+2026-04-15 12:27:50.498 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ilja]
+2026-04-15 12:27:50.498 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2435]
+2026-04-15 12:27:50.499 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:27:50.833 DEBUG [main] org.hibernate.SQL - 
     select
         fe1_0.id,
         fe1_0.originalTitle,
@@ -161,4 +656,1893 @@
         films fe1_0 
     where
         fe1_0.userId=?
-2026-04-08 20:13:35.745 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [123456]
+2026-04-15 12:27:50.834 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.098 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.099 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.099 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-04-15 12:27:53.101 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.101 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.101 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:27:53.104 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.105 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.105 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:27:53.106 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.106 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.106 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-04-15 12:27:53.107 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.107 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.107 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-04-15 12:27:53.108 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.108 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.108 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-04-15 12:27:53.109 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.109 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.109 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-04-15 12:27:53.110 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.110 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.110 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar]
+2026-04-15 12:27:53.110 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.111 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.111 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-04-15 12:27:53.111 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.111 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.111 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar: The Way of Water]
+2026-04-15 12:27:53.112 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.112 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.112 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Inception]
+2026-04-15 12:27:53.112 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.112 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.112 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future]
+2026-04-15 12:27:53.113 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.113 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.113 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Across the Spider-Verse]
+2026-04-15 12:27:53.114 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.114 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.114 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Wild Robot]
+2026-04-15 12:27:53.114 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.115 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.115 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Star Wars]
+2026-04-15 12:27:53.115 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.115 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.115 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune]
+2026-04-15 12:27:53.116 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.116 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.116 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Mad Max: Fury Road]
+2026-04-15 12:27:53.117 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.117 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.117 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iron Man]
+2026-04-15 12:27:53.117 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.118 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.118 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune: Part Two]
+2026-04-15 12:27:53.118 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.118 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.118 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Into the Spider-Verse]
+2026-04-15 12:27:53.119 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.119 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.119 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Martian]
+2026-04-15 12:27:53.119 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.119 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.119 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 3]
+2026-04-15 12:27:53.120 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.120 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.120 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [2001: A Space Odyssey]
+2026-04-15 12:27:53.120 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.120 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.120 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 2]
+2026-04-15 12:27:53.121 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.121 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.121 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Everything Everywhere All at Once]
+2026-04-15 12:27:53.121 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.122 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.122 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator]
+2026-04-15 12:27:53.122 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.122 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.122 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Empire Strikes Back]
+2026-04-15 12:27:53.123 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.123 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.123 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [E.T. the Extra-Terrestrial]
+2026-04-15 12:27:53.124 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ready Player One]
+2026-04-15 12:27:53.124 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.124 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [X-Men: Days of Future Past]
+2026-04-15 12:27:53.125 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.125 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.125 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Transformers One]
+2026-04-15 12:27:53.125 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.125 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.126 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Captain America: The Winter Soldier]
+2026-04-15 12:27:53.126 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.126 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.126 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy]
+2026-04-15 12:27:53.127 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.127 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.127 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Return of the Jedi]
+2026-04-15 12:27:53.127 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.127 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.127 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Jurassic Park]
+2026-04-15 12:27:53.128 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.128 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.128 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Godzilla vs. Kong]
+2026-04-15 12:27:53.128 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.128 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.129 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future Part II]
+2026-04-15 12:27:53.129 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.129 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.129 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Rogue One: A Star Wars Story]
+2026-04-15 12:27:53.130 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.130 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.130 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Treasure Planet]
+2026-04-15 12:27:53.130 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.130 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.130 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Planet of the Apes]
+2026-04-15 12:27:53.131 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.131 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.131 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Nirvanna the Band the Show the Movie]
+2026-04-15 12:27:53.131 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.132 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.132 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Nimona]
+2026-04-15 12:27:53.132 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.132 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.132 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Finch]
+2026-04-15 12:27:53.133 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.133 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.133 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Justice League: The Flashpoint Paradox]
+2026-04-15 12:27:53.134 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:27:53.134 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:27:53.134 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Regular Show: The Movie]
+2026-04-15 12:29:55.816 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:29:55.818 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:29:55.818 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:29:55.818 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:29:55.835 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:29:55.952 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:29:55.952 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:29:55.952 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:29:55.952 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:29:55.953 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:29:56.029 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:29:56.030 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [The Avengers]
+2026-04-15 12:29:56.030 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:29:56.030 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:29:56.031 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:29:56.118 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (chatId, name, userTgId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:29:56.118 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [23433]
+2026-04-15 12:29:56.118 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ilja]
+2026-04-15 12:29:56.118 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2435]
+2026-04-15 12:29:56.119 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:29:56.418 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=?
+2026-04-15 12:29:56.418 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.480 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.480 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.480 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-04-15 12:29:57.482 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.483 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.483 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:29:57.485 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.485 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.485 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:29:57.486 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.486 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.486 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-04-15 12:29:57.487 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.487 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.487 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-04-15 12:29:57.487 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.487 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.487 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-04-15 12:29:57.488 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.489 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.489 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-04-15 12:29:57.489 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.489 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.489 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar]
+2026-04-15 12:29:57.490 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.490 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.490 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-04-15 12:29:57.490 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.491 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.491 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar: The Way of Water]
+2026-04-15 12:29:57.491 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.491 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.491 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Inception]
+2026-04-15 12:29:57.492 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.492 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.492 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future]
+2026-04-15 12:29:57.492 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.492 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.492 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Across the Spider-Verse]
+2026-04-15 12:29:57.493 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.493 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.493 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Wild Robot]
+2026-04-15 12:29:57.493 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.494 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.494 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Star Wars]
+2026-04-15 12:29:57.494 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.494 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.494 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune]
+2026-04-15 12:29:57.495 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.495 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.495 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Mad Max: Fury Road]
+2026-04-15 12:29:57.496 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.496 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.496 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iron Man]
+2026-04-15 12:29:57.497 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.497 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.497 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune: Part Two]
+2026-04-15 12:29:57.497 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.497 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.497 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Into the Spider-Verse]
+2026-04-15 12:29:57.498 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.498 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.498 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Martian]
+2026-04-15 12:29:57.499 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.499 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.499 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 3]
+2026-04-15 12:29:57.499 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.500 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.500 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [2001: A Space Odyssey]
+2026-04-15 12:29:57.500 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.501 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.501 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 2]
+2026-04-15 12:29:57.501 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.502 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.502 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Everything Everywhere All at Once]
+2026-04-15 12:29:57.502 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.502 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.502 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator]
+2026-04-15 12:29:57.503 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.503 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.503 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Empire Strikes Back]
+2026-04-15 12:29:57.504 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.504 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.504 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [E.T. the Extra-Terrestrial]
+2026-04-15 12:29:57.504 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.504 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.504 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ready Player One]
+2026-04-15 12:29:57.505 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.505 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.505 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [X-Men: Days of Future Past]
+2026-04-15 12:29:57.505 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.505 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.505 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Transformers One]
+2026-04-15 12:29:57.506 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.506 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.506 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Captain America: The Winter Soldier]
+2026-04-15 12:29:57.507 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.507 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.507 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy]
+2026-04-15 12:29:57.508 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.508 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.508 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Return of the Jedi]
+2026-04-15 12:29:57.508 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.508 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.508 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Jurassic Park]
+2026-04-15 12:29:57.509 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.509 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.509 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Godzilla vs. Kong]
+2026-04-15 12:29:57.510 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.510 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.510 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future Part II]
+2026-04-15 12:29:57.510 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.510 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.510 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Rogue One: A Star Wars Story]
+2026-04-15 12:29:57.511 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.511 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.511 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Treasure Planet]
+2026-04-15 12:29:57.511 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.512 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.512 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Planet of the Apes]
+2026-04-15 12:29:57.512 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.512 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.512 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Nirvanna the Band the Show the Movie]
+2026-04-15 12:29:57.513 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.513 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.513 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Nimona]
+2026-04-15 12:29:57.513 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.513 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.513 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Finch]
+2026-04-15 12:29:57.514 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.514 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.514 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Justice League: The Flashpoint Paradox]
+2026-04-15 12:29:57.514 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:29:57.514 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:29:57.514 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Regular Show: The Movie]
+2026-04-15 12:29:57.522 DEBUG [main] org.hibernate.SQL - 
+    delete 
+    from
+        films
+2026-04-15 12:30:01.678 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:30:01.683 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:30:01.683 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:30:01.683 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:30:01.688 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:30:02.197 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:30:02.197 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:30:02.197 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:30:02.197 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:30:02.198 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:30:02.298 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        films
+        (originalTitle, review, userId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:30:02.299 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [The Avengers]
+2026-04-15 12:30:02.299 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [10]
+2026-04-15 12:30:02.299 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-04-15 12:30:02.300 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:30:02.403 DEBUG [main] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (chatId, name, userTgId) 
+    values
+        (?, ?, ?)
+2026-04-15 12:30:02.404 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [23433]
+2026-04-15 12:30:02.404 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ilja]
+2026-04-15 12:30:02.404 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2435]
+2026-04-15 12:30:02.405 DEBUG [main] org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+2026-04-15 12:30:02.731 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=?
+2026-04-15 12:30:02.732 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.826 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.826 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.826 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-04-15 12:30:03.828 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.828 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.828 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-04-15 12:30:03.829 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.829 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.829 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-04-15 12:30:03.830 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.830 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.830 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-04-15 12:30:03.831 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.831 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.831 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-04-15 12:30:03.831 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.832 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.832 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-04-15 12:30:03.832 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.832 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.832 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-04-15 12:30:03.833 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.833 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.833 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar]
+2026-04-15 12:30:03.834 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.834 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.834 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-04-15 12:30:03.835 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.835 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.835 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avatar: The Way of Water]
+2026-04-15 12:30:03.836 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.836 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.836 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Inception]
+2026-04-15 12:30:03.836 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.837 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.837 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future]
+2026-04-15 12:30:03.837 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.838 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.838 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Across the Spider-Verse]
+2026-04-15 12:30:03.838 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.838 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.838 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Wild Robot]
+2026-04-15 12:30:03.839 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.839 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.839 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Star Wars]
+2026-04-15 12:30:03.840 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.840 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.840 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune]
+2026-04-15 12:30:03.840 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.840 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.840 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Mad Max: Fury Road]
+2026-04-15 12:30:03.841 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.841 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.841 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iron Man]
+2026-04-15 12:30:03.842 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.842 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.842 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Dune: Part Two]
+2026-04-15 12:30:03.842 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.843 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.843 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: Into the Spider-Verse]
+2026-04-15 12:30:03.843 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.843 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.843 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Martian]
+2026-04-15 12:30:03.844 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.844 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.844 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 3]
+2026-04-15 12:30:03.845 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.845 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.845 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [2001: A Space Odyssey]
+2026-04-15 12:30:03.845 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.845 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.845 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy Vol. 2]
+2026-04-15 12:30:03.846 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.846 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.846 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Everything Everywhere All at Once]
+2026-04-15 12:30:03.846 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.847 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.847 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator]
+2026-04-15 12:30:03.847 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.847 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.847 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Empire Strikes Back]
+2026-04-15 12:30:03.848 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.848 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.848 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [E.T. the Extra-Terrestrial]
+2026-04-15 12:30:03.849 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.849 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.849 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Ready Player One]
+2026-04-15 12:30:03.850 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.850 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.850 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [X-Men: Days of Future Past]
+2026-04-15 12:30:03.851 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.851 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.851 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Transformers One]
+2026-04-15 12:30:03.851 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.852 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.852 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Captain America: The Winter Soldier]
+2026-04-15 12:30:03.852 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.852 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.853 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Guardians of the Galaxy]
+2026-04-15 12:30:03.853 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.854 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.854 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Return of the Jedi]
+2026-04-15 12:30:03.854 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.854 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.854 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Jurassic Park]
+2026-04-15 12:30:03.855 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.855 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.855 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Godzilla vs. Kong]
+2026-04-15 12:30:03.855 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.856 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.856 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Back to the Future Part II]
+2026-04-15 12:30:03.856 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.856 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.856 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Rogue One: A Star Wars Story]
+2026-04-15 12:30:03.857 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.857 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.857 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Treasure Planet]
+2026-04-15 12:30:03.857 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.857 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.858 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Planet of the Apes]
+2026-04-15 12:30:03.858 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.858 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.858 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Nirvanna the Band the Show the Movie]
+2026-04-15 12:30:03.859 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.859 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.859 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Nimona]
+2026-04-15 12:30:03.859 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.859 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.860 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Finch]
+2026-04-15 12:30:03.860 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.860 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.860 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Justice League: The Flashpoint Paradox]
+2026-04-15 12:30:03.861 DEBUG [main] org.hibernate.SQL - 
+    select
+        fe1_0.id,
+        fe1_0.originalTitle,
+        fe1_0.review,
+        fe1_0.userId 
+    from
+        films fe1_0 
+    where
+        fe1_0.userId=? 
+        and fe1_0.originalTitle=?
+2026-04-15 12:30:03.861 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-04-15 12:30:03.861 TRACE [main] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Regular Show: The Movie]
+2026-04-15 12:30:03.868 DEBUG [main] org.hibernate.SQL - 
+    delete 
+    from
+        films

@@ -8,6 +8,7 @@ import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RestApi {
@@ -24,44 +25,47 @@ public class RestApi {
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
-    // ✅ FIXED: genre search
-    public Films[] searchMovieByGenre(List<Integer> genIds)
+
+    public Films[] searchMovieByGenre(List<Integer> genIds,int pages)
             throws IOException, InterruptedException {
 
         if (genIds == null || genIds.isEmpty()) {
             return new Films[0];
         }
 
-        // clean way to build "28,35,18"
+
         String genres = String.join(",",
                 genIds.stream().map(String::valueOf).toList());
 
-        String url = "https://api.themoviedb.org/3/discover/movie?api_key="
-                + API_KEY + "&with_genres=" + genres;
+        List<Films> allFilms = new ArrayList<>();
 
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .GET()
-                .build();
+        for (int i = 1; i <= pages; i++) {
 
-        HttpResponse<String> response = httpClient.send(
-                request, HttpResponse.BodyHandlers.ofString());
+            String url = "https://api.themoviedb.org/3/discover/movie?api_key="
+                    + API_KEY + "&with_genres=" + genres + "&page=" + i;
 
-        if (response.statusCode() == 404) {
-            return new Films[0];
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = httpClient.send(
+                    request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() != 200) {
+                throw new IOException("HTTP error code: " + response.statusCode());
+            }
+
+            FilmResponse filmResponse = objectMapper.readValue(
+                    response.body(), FilmResponse.class);
+
+            allFilms.addAll(filmResponse.getResults());
         }
 
-        if (response.statusCode() != 200) {
-            throw new IOException("HTTP error code: " + response.statusCode());
-        }
-
-        FilmResponse filmResponse = objectMapper.readValue(
-                response.body(), FilmResponse.class);
-
-        return filmResponse.getResults().toArray(new Films[0]);
+        return allFilms.toArray(new Films[0]);
     }
 
-    // ✅ unchanged but slightly cleaned
+
     public Films[] getFilmsByName(String movieName)
             throws IOException, InterruptedException {
 

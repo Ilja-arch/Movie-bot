@@ -28,7 +28,7 @@ public class GenreMapper {
         GENRES.put(10752, "War");
         GENRES.put(37, "Western");
 
-        // build reverse map
+
         for (Map.Entry<Integer, String> entry : GENRES.entrySet()) {
             GENRE_IDS.put(entry.getValue(), entry.getKey());
         }

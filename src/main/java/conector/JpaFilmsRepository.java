@@ -25,13 +25,42 @@ public class JpaFilmsRepository {
             em.close();
         }
     }
+    public List<FilmsEntity> getAllWatchedFilmsInApp(String filmName){
+        EntityManager em = JpaUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+            try {
+                return em.createQuery(
+                                "SELECT f FROM FilmsEntity f WHERE f.originalTitle = :title",
+                                FilmsEntity.class)
+                        .setParameter("title", filmName)
+                        .getResultList();
+            } finally {
+                em.close();
+            }
+
+    }
+    public void deleteAll() {
+        EntityManager em = JpaUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+            em.createQuery("DELETE FROM FilmsEntity").executeUpdate();
+            tx.commit();
+        } catch (Exception e) {
+            if (tx.isActive()) tx.rollback();
+            throw e;
+        } finally {
+            em.close();
+        }
+    }
     public void save(FilmsEntity film){
         EntityManager em = JpaUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
             tx.begin();
-            em.merge(film);
+            em.persist(film);
             tx.commit();
         } catch (Exception e){
             if (tx.isActive()) tx.rollback();

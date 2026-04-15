@@ -21,6 +21,21 @@ public class JpaUserRepository {
             em.close();
         }
     }
+    public void deleteAll() {
+        EntityManager em = JpaUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+            em.createQuery("DELETE FROM FilmsEntity").executeUpdate();
+            tx.commit();
+        } catch (Exception e) {
+            if (tx.isActive()) tx.rollback();
+            throw e;
+        } finally {
+            em.close();
+        }
+    }
     public Optional<UserEntity> findByTgId(long tgId){
         log.info("finding user by tgId: {}", tgId);
         EntityManager em = JpaUtil.getEntityManager();
