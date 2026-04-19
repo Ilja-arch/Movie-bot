@@ -1,4 +1,4 @@
-package conector;
+package repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

@@ -1,7 +1,4 @@
-package conector;
-
-import conector.JpaFilmsRepository;
-import conector.JpaUserRepository;
+package repository;
 
 import java.util.List;
 import java.util.Optional;

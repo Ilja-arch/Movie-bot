@@ -1,4 +1,4 @@
-package conector;
+package repository;
 import jakarta.persistence.*;
 import lombok.*;
 @Getter

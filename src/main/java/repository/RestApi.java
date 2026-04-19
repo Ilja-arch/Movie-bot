@@ -1,4 +1,4 @@
-package conector;
+package repository;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,6 +23,27 @@ public class RestApi {
         this.httpClient = HttpClient.newHttpClient();
         this.objectMapper = new ObjectMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    }
+    public List<Films> getTrendingWeek() throws IOException, InterruptedException {
+
+        String url = "https://api.themoviedb.org/3/trending/movie/week?api_key=" + API_KEY;
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(url))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = httpClient.send(
+                request, HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() != 200) {
+            throw new IOException("HTTP error: " + response.statusCode());
+        }
+
+        FilmResponse filmResponse = objectMapper.readValue(
+                response.body(), FilmResponse.class);
+
+        return filmResponse.getResults();
     }
 
 

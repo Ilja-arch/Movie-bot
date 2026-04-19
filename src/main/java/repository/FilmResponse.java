@@ -1,4 +1,4 @@
-package conector;
+package repository;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

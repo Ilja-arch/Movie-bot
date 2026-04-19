@@ -1,4 +1,4 @@
-package conector;
+package repository;
 
 import jakarta.persistence.*;
 import lombok.extern.slf4j.Slf4j;
@@ -36,7 +36,7 @@ public class JpaUserRepository {
             em.close();
         }
     }
-    public Optional<UserEntity> findByTgId(long tgId){
+    public UserEntity findByTgId(long tgId){
         log.info("finding user by tgId: {}", tgId);
         EntityManager em = JpaUtil.getEntityManager();
         try {
@@ -45,8 +45,7 @@ public class JpaUserRepository {
                             UserEntity.class
                     )
                     .setParameter("tgId", tgId)
-                    .getResultStream()
-                    .findFirst();
+                    .getResultList().stream().findFirst().orElse(null);
         } finally {
             em.close();
         }
