@@ -12,5 +12,7 @@ public class Films {
     private List<String> genre_ids;
     private String overview;
     private Double vote_average;
+    private Integer vote_count;
     private String original_language;
+    private Double runtime;
 }

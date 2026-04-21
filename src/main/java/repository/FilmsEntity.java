@@ -12,7 +12,7 @@ import lombok.*;
 
 public class FilmsEntity {
     @Id
-    @EqualsAndHashCode.Include
+    @EqualsAndHashCode.Include//need to rewrite as popular films(posterUrl, duration, review, voites count)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -23,7 +23,7 @@ public class FilmsEntity {
     private Long userId;
 
     @Column(nullable = false)
-    private int review;
+    private double review;
 
 }
 

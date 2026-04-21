@@ -2,9 +2,15 @@ package repository;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URI;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.net.http.*;
 import java.nio.charset.StandardCharsets;
@@ -24,6 +30,74 @@ public class RestApi {
         this.objectMapper = new ObjectMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
+    public String getPosterUrl(String movieName) {
+        try {
+            String movieId = getMovieId(movieName);
+
+            if (movieId == null) return null;
+
+            String url = "https://api.themoviedb.org/3/movie/" + movieId + "?api_key=" + API_KEY;
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = httpClient.send(
+                    request, HttpResponse.BodyHandlers.ofString()
+            );
+
+            if (response.statusCode() != 200) return null;
+
+            JSONObject json = new JSONObject(response.body());
+            String posterPath = json.optString("poster_path", null);
+
+            if (posterPath == null) return null;
+
+            return "https://image.tmdb.org/t/p/w500" + posterPath;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public String getMovieId(String movieName){
+        try {
+            String query = URLEncoder.encode(movieName, "UTF-8");
+            String apiUrl = "https://api.themoviedb.org/3/search/movie?api_key="
+                    + API_KEY + "&query=" + query;
+
+            URL url = new URL(apiUrl);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream())
+            );
+
+            StringBuilder response = new StringBuilder();
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                response.append(line);
+            }
+            reader.close();
+
+            JSONObject json = new JSONObject(response.toString());
+            JSONArray results = json.getJSONArray("results");
+
+            if (results.length() > 0) {
+                JSONObject firstMovie = results.getJSONObject(0);
+                return String.valueOf(firstMovie.getInt("id"));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     public List<Films> getTrendingWeek() throws IOException, InterruptedException {
 
         String url = "https://api.themoviedb.org/3/trending/movie/week?api_key=" + API_KEY;
@@ -85,7 +159,32 @@ public class RestApi {
 
         return allFilms.toArray(new Films[0]);
     }
+    public Integer getMovieDuration(String movieName) {
+        try {
+            String movieId = getMovieId(movieName);
+            if (movieId == null) return null;
 
+            String url = "https://api.themoviedb.org/3/movie/" + movieId + "?api_key=" + API_KEY;
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = httpClient.send(
+                    request, HttpResponse.BodyHandlers.ofString()
+            );
+
+            if (response.statusCode() != 200) return null;
+
+            JSONObject json = new JSONObject(response.body());
+            return json.optInt("runtime", 0);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public Films[] getFilmsByName(String movieName)
             throws IOException, InterruptedException {

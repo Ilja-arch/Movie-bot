@@ -8,16 +8,24 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.*;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
+import repository.FilmsEntity;
+import repository.GenreMapper;
 import service.FilmsService;
 import repository.Films;
 
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.*;
+
+import static org.apache.commons.lang3.StringUtils.isNumeric;
 
 public class MovieBot extends TelegramLongPollingBot {
 
     private final FilmsService userService = new FilmsService();
+    private Films currentFilm = new Films();
 
-    // хранение состояния пользователей
     private Map<Long, String> userLastFilm = new HashMap<>();
 
     public static void main(String[] args) throws Exception {
@@ -29,7 +37,7 @@ public class MovieBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
 
-        // 🔘 INLINE кнопки (рейтинг)
+
         if (update.hasCallbackQuery()) {
             String data = update.getCallbackQuery().getData();
             Long chatId = update.getCallbackQuery().getMessage().getChatId();
@@ -49,22 +57,39 @@ public class MovieBot extends TelegramLongPollingBot {
 
         String text = update.getMessage().getText();
         Long chatId = update.getMessage().getChatId();
-
+        Long userTgId = update.getMessage().getFrom().getId();
+        String userName = update.getMessage().getChat().getUserName();
         switch (text) {
 
-            case "/start" -> sendWelcome(chatId);
+            case "/start" -> sendWelcome(chatId,userTgId,userName);
 
             case "🔍 Find films" -> send(chatId, "Type film name:");
             case "🔥 Popular" -> showPopular(chatId);
-            case "⭐ My films" -> showMyFilms(chatId);
+            case "⭐ My films" -> showMyFilms(userTgId);
             case "🎯 Recommend" -> showRecommendations(chatId);
+            case "Back" -> sendMenu(chatId);
+            case "Save film" ->
+                saveFilm(chatId);
+            default -> send(chatId, "❌ Unknown command");
 
-            default -> handleInput(chatId, text);
+
         }
     }
 
-    // 🎬 Welcome
-    private void sendWelcome(Long chatId) {
+    private void sendMenu(Long chatId){
+        send(chatId,
+                "🎬 Hello! Welcome to Movie Bot!\n\n" +
+                        "🔍 Find films\n" +
+                        "⭐ Save & rate\n" +
+                        "🔥 Popular this week\n" +
+                        "🎯 Recommendations\n\n" +
+                        "Choose 👇",
+                getMenu());
+    }
+    private void sendWelcome(Long chatId,Long tgId,String name) {
+        if (userService.findByIdByTgId(chatId)==-1){
+            userService.saveUser(chatId,tgId,name);
+        }
         send(chatId,
                 "🎬 Hello! Welcome to Movie Bot!\n\n" +
                         "🔍 Find films\n" +
@@ -75,52 +100,122 @@ public class MovieBot extends TelegramLongPollingBot {
                 getMenu());
     }
 
-    // 🔍 поиск + добавление
-    private void handleInput(Long chatId, String text) {
 
-        // add film
-        if (text.startsWith("add ")) {
-            String filmName = text.replace("add ", "");
-            userLastFilm.put(chatId, filmName);
+    private void saveFilm(Long chatId) {
 
-            sendInline(chatId, "⭐ Rate this film:", getRatingButtons());
+        if (currentFilm == null) {
+            send(chatId, "❌ No film to rate");
             return;
         }
 
-        try {
-            Films[] films = userService.getFilmsForUser(List.of("Action"), chatId);
+        // store film per user (IMPORTANT)
+        userLastFilm.put(chatId, currentFilm.getOriginal_title());
 
-            if (films == null || films.length == 0) {
-                send(chatId, "❌ No films found");
+        sendInline(
+                chatId,
+                "⭐ Rate this film: " + currentFilm.getOriginal_title(),
+                getRatingButtons()
+        );
+    }
+    private void handleCallback(Update update) {
+
+        String data = update.getCallbackQuery().getData();
+        Long chatId = update.getCallbackQuery().getMessage().getChatId();
+
+        if (data.startsWith("rate_")) {
+            handleRating(chatId, data);
+        }
+    }
+    private void handleRating(Long chatId, String data) {
+
+        try {
+            int rating = Integer.parseInt(data.replace("rate_", ""));
+
+            String filmName = userLastFilm.get(chatId);
+
+            if (filmName == null) {
+                send(chatId, "❌ No film selected");
                 return;
             }
 
-            for (Films f : films) {
-                send(chatId,
-                        "🎬 " + f.getOriginal_title() +
-                                "\n➡️ add " + f.getOriginal_title());
-            }
+            userService.saveWatchedFilm(rating, filmName, chatId);
+
+            send(chatId, "✅ Saved: " + filmName + " (" + rating + "⭐)");
+
+            userLastFilm.remove(chatId);
 
         } catch (Exception e) {
-            send(chatId, "Error");
+            send(chatId, "❌ Invalid rating");
         }
     }
 
-    // 🔥 популярные
-    private void showPopular(Long chatId) {
+    private  void showPopular(Long chatId) {
         try {
-            var films = userService.getPopularFilmsThisWeek();
+            send(chatId,"hi",getScrollMenu());
 
+            List<Films> films = userService.getPopularFilmsThisWeek();
+            GenreMapper mapper = new GenreMapper();
+            int count = 1;
             for (var f : films) {
-                send(chatId, "🔥 " + f.getOriginal_title());
+                String Text;
+                currentFilm = f;
+                if (f.getVote_average() > 0) {
+                    Text = "\n⭐Rating " + String.format("%.1f",f.getVote_average());
+                    Text+="\n\uD83D\uDE4B votes "+f.getVote_count();
+                } else {
+                    Text = "\n⭐ No ratings yet";
+                }
+                Text += "\n⏳ Duration "+userService.getMovieDuration(f.getOriginal_title());
+                List<String> genList= f.getGenre_ids();
+                Text += "\n\uD83C\uDFAC Genres ";
+                int c = 0;
+                for (String g:genList) {
+                    if (c>genList.size()-2){
+                        Text += mapper.getGenreName(Integer.parseInt(g));
+                    }else {
+                        Text += mapper.getGenreName(Integer.parseInt(g)) + ", ";
+                    }
+                    c++;
+                }
+                sendPhoto(chatId,userService.getFilmUrl(f.getOriginal_title()),"\uD83D\uDD25 "+f.getOriginal_title()+Text);
+                System.out.println("\uD83D\uDD25 "+f.getOriginal_title()+"   "+f.getVote_average()+"    "+f.getVote_count()+"   "+userService.getMovieDuration(f.getOriginal_title()));
+                if (count ==  3){
+                    break;
+                }
+                count++;
             }
 
         } catch (Exception e) {
             send(chatId, "Error");
         }
     }
+    private void sendPhoto(Long chatId, String imageUrl, String caption) {
+        try {
+            String apiUrl = "https://api.telegram.org/bot" + getBotToken() + "/sendPhoto";
 
-    // ⭐ мои фильмы
+            String params = "chat_id=" + URLEncoder.encode(chatId.toString(), "UTF-8") +
+                    "&photo=" + URLEncoder.encode(imageUrl, "UTF-8") +
+                    "&caption=" + URLEncoder.encode(caption, "UTF-8");
+
+            URL url = new URL(apiUrl);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+            conn.setRequestMethod("POST");
+            conn.setDoOutput(true);
+
+            try (OutputStream os = conn.getOutputStream()) {
+                os.write(params.getBytes());
+            }
+
+            int responseCode = conn.getResponseCode();
+            System.out.println("Photo sent. Response code: " + responseCode);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
     private void showMyFilms(Long chatId) {
 
         Films[] films = userService.getWatchedFilms(chatId);
@@ -137,7 +232,7 @@ public class MovieBot extends TelegramLongPollingBot {
         }
     }
 
-    // 🎯 рекомендации
+
     private void showRecommendations(Long chatId) {
 
         try {
@@ -152,7 +247,7 @@ public class MovieBot extends TelegramLongPollingBot {
         }
     }
 
-    // 📱 меню
+
     private ReplyKeyboardMarkup getMenu() {
 
         KeyboardRow row1 = new KeyboardRow();
@@ -169,8 +264,17 @@ public class MovieBot extends TelegramLongPollingBot {
 
         return keyboard;
     }
+    private ReplyKeyboardMarkup getScrollMenu(){
+        KeyboardRow row1 = new KeyboardRow();
+        row1.add("Next film");
+        row1.add("Save film");
+        row1.add("Back");
+        ReplyKeyboardMarkup keyboard = new ReplyKeyboardMarkup();
+        keyboard.setKeyboard(List.of(row1));
+        keyboard.setResizeKeyboard(true);
+        return keyboard;
+    }
 
-    // ⭐ inline кнопки рейтинга
     private InlineKeyboardMarkup getRatingButtons() {
 
         List<List<InlineKeyboardButton>> rows = new ArrayList<>();
@@ -201,7 +305,7 @@ public class MovieBot extends TelegramLongPollingBot {
         return markup;
     }
 
-    // 📤 send
+
     private void send(Long chatId, String text) {
         send(chatId, text, null);
     }
@@ -235,11 +339,10 @@ public class MovieBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "SearchBestMovieForYoubot";
+        return "BestMovie4you_bot";
     }
 
+    private static final String BOT_TOKEN = System.getenv("botToken");
     @Override
-    public String getBotToken() {
-        return "8652319476:AAHGtZliMzKi5eSaY7bZiO0p-jjU_zlQbEc";
-    }
+    public String getBotToken() {return "botToken";}
 }

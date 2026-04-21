@@ -55,7 +55,7 @@ public class JpaFilmsRepository {
     public void save(FilmsEntity film){
         EntityManager em = JpaUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
-
+        System.out.println("saved "+film.getOriginalTitle());
         try {
             tx.begin();
             em.persist(film);
