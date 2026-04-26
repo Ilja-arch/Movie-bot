@@ -1,83 +1,34 @@
 package service;
 
 
-import jakarta.persistence.Persistence;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.jvnet.hk2.annotations.Service;
 import repository.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
+@Slf4j
+@Service
+@RequiredArgsConstructor
 public class FilmsService {
     private long tgId;
     private long chatId;
     private String name;
-
-    public void UserService(long tgId, long chatId) {
+    private final UserRepository userRepository;
+    private final FilmsRepository filmsRepository;
+    private RestApi restApi= new RestApi();
+    public void FilmsService(long tgId, long chatId) {
         this.tgId = tgId;
         this.chatId = chatId;
-        JpaUserRepository users = new JpaUserRepository();
-        if (users.findByTgId(tgId) == null) {
+        if (userRepository.findByUserTgId(tgId) == null) {
             System.out.println("user is not found by id");
             UserEntity user = new UserEntity(null, tgId, name, chatId);
-            users.save(user);
+            userRepository.save(user);
         } else {
-            UserEntity totalUser = users.findByTgId(tgId);
-
+            UserEntity totalUser = userRepository.findByUserTgId(tgId);
         }
-
-    }
-
-    public List<Films> getFilmsForUser(List<String> genres, long userId)
-            throws IOException, InterruptedException {
-        RestApi restApi = new RestApi();
-        List<Integer> genIds = new ArrayList<>();
-        JpaFilmsRepository filmsRepository = new JpaFilmsRepository();
-
-        for (String genre : genres) {
-            int id = GenreMapper.getGenreId(genre);
-            if (id != -1) {
-                genIds.add(id);
-            }
-        }
-        Films[] films = restApi.searchMovieByGenre(genIds, 20);
-        List<Films> recomendList = new ArrayList<>();
-        for (Films film : films) {
-            if (film.getVote_average() > 7.5) {
-                if (("en").equals(film.getOriginal_language())) {
-                    if (!filmsRepository.isUserWatched(film.getOriginal_title(), userId)) {
-                        List<FilmsEntity> WatchedFilmsEntities = filmsRepository.getAllWatchedFilmsInApp(film.getOriginal_title());
-                        if (!WatchedFilmsEntities.isEmpty()) {
-                            double avgUsersRating = 0.0D;
-                            double filmsCount = 0;
-                            for (FilmsEntity i : WatchedFilmsEntities) {
-                                if (i.getReview() > 7 && i.getUserId() != userId) {
-                                    avgUsersRating += i.getReview();
-                                    filmsCount++;
-                                }
-                            }
-                            avgUsersRating = avgUsersRating / filmsCount;
-                            if (avgUsersRating > 7) {
-                                recomendList.add(film);
-                                continue;
-                            } else {
-                                double totalRating = avgUsersRating + film.getVote_average() / 2;
-                                if (totalRating > 7) {
-                                    recomendList.add(film);
-                                    continue;
-                                }
-                            }
-                        }
-                        recomendList.add(film);
-                        if (recomendList.size() > 3) {
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        return recomendList;
     }
     public String formatDuration(int minutes) {
         int hours = minutes / 60;
@@ -89,18 +40,11 @@ public class FilmsService {
         RestApi restApi = new RestApi();
         return formatDuration(restApi.getMovieDuration(movieName));
     }
-    public void saveWatchedFilm(int review,String original_title,Long tgId) {
-        try {
-            long userId = findByIdByTgId(tgId);
-            JpaFilmsRepository filmsRepository = new JpaFilmsRepository();
-            FilmsEntity films = new FilmsEntity(null,original_title,userId,review);
-            filmsRepository.save(films);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    public void saveWatchedFilm(String original_title,Long tgId) {
+        filmsRepository.saveFilm(original_title,tgId,restApi.get,getMovieDuration(original_title),getFilmUrl(original_title));
     }
     public void saveUser(Long chatId,Long userTgId,String name){
-        JpaUserRepository user = new JpaUserRepository();
+        UserRepository user = new UserRepository();
         UserEntity entity = new UserEntity(null,userTgId,name,chatId);
         user.save(entity);
     }
@@ -121,7 +65,7 @@ public class FilmsService {
     public Films[] getWatchedFilms(long tgId) {
         try {
             long userId = findByIdByTgId(tgId);
-            JpaFilmsRepository filmsRepository = new JpaFilmsRepository();
+            FilmsRepository filmsRepository = new FilmsRepository();
 
             List<FilmsEntity> filmsList = filmsRepository.getAllUserFilms(userId);
 
@@ -152,8 +96,8 @@ public class FilmsService {
     public long findByIdByTgId(long tgId) {
         try {
 
-            JpaUserRepository jpaUserRepository = new JpaUserRepository();
-            UserEntity user = jpaUserRepository.findByTgId(tgId);
+            UserRepository userRepository = new UserRepository();
+            UserEntity user = userRepository.findByTgId(tgId);
             return user.getId();
         } catch (Exception ex) {
             System.out.println("Error");

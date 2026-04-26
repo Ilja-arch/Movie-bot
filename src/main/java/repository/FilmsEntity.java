@@ -23,7 +23,13 @@ public class FilmsEntity {
     private Long userId;
 
     @Column(nullable = false)
-    private double review;
+    private double rating;
+
+    @Column(nullable = false)
+    private String duration;
+
+    @Column(nullable = false)
+    private String posterUrl;
 
 }
 

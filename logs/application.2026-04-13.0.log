@@ -42,7 +42,7 @@
 	Maximum pool size: 20
 2026-04-08 20:08:19.965 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-04-08 20:08:19.982 INFO  [main] o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b14c61] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2026-04-08 20:08:20.169 INFO  [main] repository.JpaUserRepository - finding user by tgId: 123456
+2026-04-08 20:08:20.169 INFO  [main] repository.UserRepository - finding user by tgId: 123456
 2026-04-08 20:10:30.330 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: my-persistence-unit]
 2026-04-08 20:10:30.371 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
 2026-04-08 20:10:30.396 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
@@ -57,7 +57,7 @@
 	Maximum pool size: 20
 2026-04-08 20:10:31.428 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-04-08 20:10:31.445 INFO  [main] o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b14c61] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2026-04-08 20:10:31.505 INFO  [main] repository.JpaUserRepository - finding user by tgId: 123456
+2026-04-08 20:10:31.505 INFO  [main] repository.UserRepository - finding user by tgId: 123456
 2026-04-08 20:12:16.658 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: my-persistence-unit]
 2026-04-08 20:12:16.700 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
 2026-04-08 20:12:16.725 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
@@ -88,5 +88,5 @@
 	Maximum pool size: 20
 2026-04-08 20:13:34.666 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-04-08 20:13:34.685 INFO  [main] o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b14c61] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2026-04-08 20:13:35.087 INFO  [main] repository.JpaUserRepository - finding user by tgId: 123456
-2026-04-08 20:13:35.714 INFO  [main] repository.JpaFilmsRepository - finding film in db
+2026-04-08 20:13:35.087 INFO  [main] repository.UserRepository - finding user by tgId: 123456
+2026-04-08 20:13:35.714 INFO  [main] repository.FilmsRepository - finding film in db
