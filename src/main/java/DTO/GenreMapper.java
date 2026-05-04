@@ -1,4 +1,4 @@
-package repository;
+package DTO;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -21,23 +21,14 @@ public interface FilmsRepository extends JpaRepository<FilmsEntity, Long> {
     INSERT INTO films (
         original_title,
         user_id,
-        rating,
-        duration,
-        poster_url
     ) VALUES (
         :originalTitle,
         :userId,
-        :rating,
-        :duration,
-        :posterUrl
     )
     """, nativeQuery = true)
     void saveFilm(
             @Param("originalTitle") String originalTitle,
-            @Param("userId") Long userId,
-            @Param("rating") double rating,
-            @Param("duration") String duration,
-            @Param("posterUrl") String posterUrl
+            @Param("userId") Long userId
     );
 
 

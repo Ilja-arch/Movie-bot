@@ -1,6 +1,6 @@
 package service;
 
-
+import DTO.Films;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jvnet.hk2.annotations.Service;
@@ -8,101 +8,106 @@ import repository.*;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class FilmsService {
-    private long tgId;
-    private long chatId;
-    private String name;
+public class FilmsService  {
+
     private final UserRepository userRepository;
     private final FilmsRepository filmsRepository;
-    private RestApi restApi= new RestApi();
-    public void FilmsService(long tgId, long chatId) {
-        this.tgId = tgId;
-        this.chatId = chatId;
-        if (userRepository.findByUserTgId(tgId) == null) {
-            System.out.println("user is not found by id");
-            UserEntity user = new UserEntity(null, tgId, name, chatId);
-            userRepository.save(user);
-        } else {
-            UserEntity totalUser = userRepository.findByUserTgId(tgId);
+    private final FilmRestService filmRestService;
+
+    // Register user if not exists
+    public void registerUser(long tgId, long chatId, String name) {
+        UserEntity user = userRepository.findByUserTgId(tgId);
+
+        if (user == null) {
+            log.info("User not found. Creating new user with tgId={}", tgId);
+            userRepository.save(new UserEntity(null, tgId, name, chatId));
         }
     }
+
+
     public String formatDuration(int minutes) {
         int hours = minutes / 60;
         int mins = minutes % 60;
-
         return hours + "h " + mins + "m";
     }
-    public String getMovieDuration(String movieName){
-        RestApi restApi = new RestApi();
-        return formatDuration(restApi.getMovieDuration(movieName));
-    }
-    public void saveWatchedFilm(String original_title,Long tgId) {
-        filmsRepository.saveFilm(original_title,tgId,restApi.get,getMovieDuration(original_title),getFilmUrl(original_title));
-    }
-    public void saveUser(Long chatId,Long userTgId,String name){
-        UserRepository user = new UserRepository();
-        UserEntity entity = new UserEntity(null,userTgId,name,chatId);
-        user.save(entity);
-    }
-    public List<Films> getPopularFilmsThisWeek() throws IOException, InterruptedException {
-        RestApi restApi = new RestApi();
-        try{
-            return restApi.getTrendingWeek();
+
+
+    public String getMovieDuration(String movieName) {
+        try {
+            int duration = filmRestService.getMovieDuration(movieName);
+            return formatDuration(duration);
         } catch (Exception ex) {
-            System.out.println("error");
+            log.error("Failed to get duration for movie: {}", movieName, ex);
+            return "Unknown";
+        }
+    }
+
+
+    public void saveWatchedFilm(String originalTitle, Long tgId) {
+        try {
+            filmsRepository.saveFilm(originalTitle, tgId);
+        } catch (Exception ex) {
+            log.error("Error saving film '{}' for tgId={}", originalTitle, tgId, ex);
+        }
+    }
+
+
+    public List<Films> getPopularFilmsThisWeek() {
+        try {
+            return filmRestService.getTrendingWeek();
+        } catch (IOException | InterruptedException ex) {
+            log.error("Error fetching trending films", ex);
+            return List.of();
+        } catch (Exception ex) {
+            log.error("Unexpected error fetching trending films", ex);
+            return List.of();
+        }
+    }
+
+
+    public String getFilmUrl(String movieName) {
+        try {
+            return filmRestService.getPosterUrl(movieName);
+        } catch (Exception ex) {
+            log.error("Error fetching poster for movie: {}", movieName, ex);
             return null;
         }
     }
-    public static String getFilmUrl(String movieName) {
-        RestApi restApi = new RestApi();
-        return restApi.getPosterUrl(movieName);
-    }
 
-    public Films[] getWatchedFilms(long tgId) {
+
+    public List<Films> getWatchedFilms(long tgId) {
         try {
-            long userId = findByIdByTgId(tgId);
-            FilmsRepository filmsRepository = new FilmsRepository();
+            long userId = getUserIdByTgId(tgId);
 
             List<FilmsEntity> filmsList = filmsRepository.getAllUserFilms(userId);
 
-            if (filmsList.isEmpty()) {
-                return new Films[0];
-            }
-
-            Films[] result = new Films[filmsList.size()];
-
-            for (int i = 0; i < filmsList.size(); i++) {
-                FilmsEntity entity = filmsList.get(i);
-
-                Films film = new Films();
-                film.setOriginal_title(entity.getOriginalTitle()); // adjust field names!
-                film.setVote_average(entity.getReview());
-
-                result[i] = film;
-            }
-
-            return result;
+            return filmsList.stream()
+                    .map(entity -> {
+                        Films film = new Films();
+                        film.setOriginal_title(entity.getOriginalTitle());
+                        return film;
+                    })
+                    .collect(Collectors.toList());
 
         } catch (Exception ex) {
-            ex.printStackTrace(); // 🔥 don't hide errors
-            return new Films[0];  // better than null
+            log.error("Error fetching watched films for tgId={}", tgId, ex);
+            return List.of();
         }
     }
 
-    public long findByIdByTgId(long tgId) {
-        try {
 
-            UserRepository userRepository = new UserRepository();
-            UserEntity user = userRepository.findByTgId(tgId);
-            return user.getId();
-        } catch (Exception ex) {
-            System.out.println("Error");
-            return -1;
+    public long getUserIdByTgId(long tgId) {
+        UserEntity user = userRepository.findByUserTgId(tgId);
+
+        if (user == null) {
+            throw new IllegalArgumentException("User not found for tgId: " + tgId);
         }
+
+        return user.getId();
     }
 }
-

@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <property name="LOG_DIR" value="logs"/>
     <property name="APP_LOG_FILE" value="${LOG_DIR}/application.log"/>
     <property name="SQL_LOG_FILE" value="${LOG_DIR}/sql.log"/>
-
     <appender name="APP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${APP_LOG_FILE}</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
@@ -16,7 +14,6 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-
     <appender name="SQL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${SQL_LOG_FILE}</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
@@ -29,15 +26,12 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-
     <logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
         <appender-ref ref="SQL_FILE"/>
     </logger>
-
     <logger name="org.hibernate.orm.jdbc.bind" level="TRACE" additivity="false">
         <appender-ref ref="SQL_FILE"/>
     </logger>
-
     <root level="INFO">
         <appender-ref ref="APP_FILE"/>
     </root>

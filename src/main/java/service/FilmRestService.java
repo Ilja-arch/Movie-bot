@@ -1,9 +1,11 @@
-package repository;
+package service;
 
+import DTO.Films;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import repository.FilmResponse;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +19,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestApi {
+public class FilmRestService {
 
     private static final String BASE_URL = "https://api.themoviedb.org/3/search/movie";
     private static final String API_KEY = "2b1c264e855785a9f115ce89b7a4d495";
@@ -25,7 +27,7 @@ public class RestApi {
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
 
-    public RestApi() {
+    public FilmRestService() {
         this.httpClient = HttpClient.newHttpClient();
         this.objectMapper = new ObjectMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -184,43 +186,5 @@ public class RestApi {
             e.printStackTrace();
             return null;
         }
-    }
-
-    public Films[] getFilmsByName(String movieName)
-            throws IOException, InterruptedException {
-
-        if (movieName == null || movieName.isBlank()) {
-            return new Films[0];
-        }
-
-        String encodedName = URLEncoder.encode(movieName, StandardCharsets.UTF_8);
-
-        String url = BASE_URL + "?api_key=" + API_KEY + "&query=" + encodedName;
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .GET()
-                .build();
-
-        HttpResponse<String> response = httpClient.send(
-                request, HttpResponse.BodyHandlers.ofString());
-
-        if (response.statusCode() == 404) {
-            return new Films[0];
-        }
-
-        if (response.statusCode() != 200) {
-            throw new IOException("HTTP error: " + response.statusCode());
-        }
-
-        FilmResponse filmResponse = objectMapper.readValue(
-                response.body(), FilmResponse.class);
-
-        return filmResponse.getResults().toArray(new Films[0]);
-    }
-
-    public String toJson(Films film) throws IOException {
-        return objectMapper.writerWithDefaultPrettyPrinter()
-                .writeValueAsString(film);
     }
 }

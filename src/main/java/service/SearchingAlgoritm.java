@@ -1,5 +1,7 @@
 package service;
 
+import DTO.Films;
+import DTO.GenreMapper;
 import repository.*;
 
 import java.io.IOException;
@@ -17,7 +19,7 @@ public class SearchingAlgoritm  {
     }
     public List<Films> getFilmsForUser()
             throws IOException, InterruptedException {
-        RestApi restApi = new RestApi();
+        FilmRestService filmRestService = new FilmRestService();
         List<Integer> genIds = new ArrayList<>();
 
 
@@ -27,7 +29,7 @@ public class SearchingAlgoritm  {
                 genIds.add(id);
             }
         }
-        Films[] films = restApi.searchMovieByGenre(genIds, 20);
+        Films[] films = filmRestService.searchMovieByGenre(genIds, 20);
         List<Films> recomendList = new ArrayList<>();
         for (Films film : films) {
             if (film.getVote_average() > 7.5) {

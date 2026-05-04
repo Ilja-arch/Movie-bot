@@ -1,4 +1,4 @@
-package repository;
+package DTO;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
