@@ -1,4 +1,4 @@
-package repository;
+package com.example.moviebot.repository;
 import jakarta.persistence.*;
 import lombok.*;
 @Getter
@@ -8,20 +8,20 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "films")
+@Table(name = "users")
 
-public class FilmsEntity {
+public class UserEntity {
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String originalTitle;
+    @Column(unique = true)
+    private Long userTgId;
 
-    @Column(nullable = false)
-    private Long userId;
+     @Column(nullable = false)
+    private String name;
+
+     @Column(nullable = false)
+    private Long chatId;
 }
-
-
-

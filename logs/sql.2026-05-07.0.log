@@ -1,0 +1,701 @@
+2026-05-07 19:47:18.767 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 19:47:18.774 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 19:47:18.774 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Swapped]
+2026-05-07 19:47:19.760 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 19:47:19.761 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 19:47:19.762 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Swapped]
+2026-05-07 19:47:20.169 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 19:47:20.169 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 19:47:20.169 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Swapped]
+2026-05-07 19:47:20.561 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 19:47:20.561 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 19:47:20.561 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Swapped]
+2026-05-07 19:48:38.862 DEBUG [main] org.hibernate.SQL - create table films (id integer, original_title varchar(255) not null, user_id bigint not null, primary key (id))
+2026-05-07 19:48:38.998 DEBUG [main] org.hibernate.SQL - create table users (id integer, chat_id bigint not null, name varchar(255) not null, user_tg_id bigint not null, primary key (id))
+2026-05-07 19:48:47.464 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 19:48:47.472 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 19:48:47.473 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Forrest Gump]
+2026-05-07 19:52:52.498 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:52:52.501 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:54:11.776 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:54:11.780 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:55:03.677 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:55:03.681 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.208 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:56:25.208 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:56:25.213 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.213 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.273 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - insert into users (chat_id,name,user_tg_id) values (?,?,?)
+2026-05-07 19:56:25.273 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - insert into users (chat_id,name,user_tg_id) values (?,?,?)
+2026-05-07 19:56:25.274 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.274 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.274 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iljuha1234]
+2026-05-07 19:56:25.274 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iljuha1234]
+2026-05-07 19:56:25.274 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.274 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.278 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select last_insert_rowid()
+2026-05-07 19:56:25.475 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select last_insert_rowid()
+2026-05-07 19:56:25.557 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:56:25.557 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:56:25.643 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:56:25.643 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:57:03.323 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:57:03.324 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 19:58:39.536 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 19:58:39.539 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:10:46.781 DEBUG [main] org.hibernate.SQL - create table films (id integer, original_title varchar(255) not null, user_id bigint not null, primary key (id))
+2026-05-07 20:10:46.928 DEBUG [main] org.hibernate.SQL - create table users (id integer, chat_id bigint not null, name varchar(255) not null, user_tg_id bigint unique, primary key (id))
+2026-05-07 20:10:47.030 DEBUG [main] org.hibernate.SQL - alter table users drop constraint UKba7war9qomtax7gvpfvpoho36
+2026-05-07 20:10:57.707 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:10:57.710 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:11:07.917 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:11:07.918 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:11:07.941 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - insert into users (chat_id,name,user_tg_id) values (?,?,?)
+2026-05-07 20:11:07.942 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:11:07.942 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iljuha1234]
+2026-05-07 20:11:07.943 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1364198563]
+2026-05-07 20:11:07.945 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select last_insert_rowid()
+2026-05-07 20:11:13.441 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:11:13.441 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:11:14.276 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:11:14.276 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:11:14.276 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:15:28.899 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:15:28.902 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:15:29.423 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:15:29.423 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:15:29.423 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:15:29.424 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:15:29.424 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:15:29.424 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Gorge]
+2026-05-07 20:15:29.425 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:15:29.425 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:15:29.425 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Titanic]
+2026-05-07 20:15:29.425 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:15:29.426 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:15:29.426 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hamnet]
+2026-05-07 20:15:35.488 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:15:45.252 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:15:45.253 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:15:45.255 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-07 20:15:45.256 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:15:52.939 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:15:52.939 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:16:01.890 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:01.890 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:01.890 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Frankenstein]
+2026-05-07 20:16:01.891 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:01.891 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:01.891 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Alien]
+2026-05-07 20:16:01.892 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:01.892 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:01.892 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Conjuring]
+2026-05-07 20:16:01.893 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:01.893 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:01.893 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Psycho]
+2026-05-07 20:16:01.986 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:16:01.986 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:16:05.664 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:05.664 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:05.664 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Frankenstein]
+2026-05-07 20:16:05.665 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:05.665 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:05.665 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Exorcist]
+2026-05-07 20:16:05.666 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:05.666 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:05.666 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Black Swan]
+2026-05-07 20:16:05.667 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:05.667 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:05.667 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Rosemary's Baby]
+2026-05-07 20:16:05.843 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:16:05.843 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:16:06.641 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:06.641 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:06.641 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Frankenstein]
+2026-05-07 20:16:06.642 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:06.642 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:06.642 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Exorcist]
+2026-05-07 20:16:06.643 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:06.643 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:06.643 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Black Swan]
+2026-05-07 20:16:06.643 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:16:06.643 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:16:06.643 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Rosemary's Baby]
+2026-05-07 20:16:10.635 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:16:12.079 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:16:13.352 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:16:35.480 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:16:35.481 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:16:35.482 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-07 20:16:35.483 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:21:37.127 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:21:37.131 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:21:40.470 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:21:40.470 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:21:40.470 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Constantine: City of Demons - The Movie]
+2026-05-07 20:21:43.248 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:21:46.914 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:21:46.914 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:21:46.915 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:21:46.915 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:27:07.408 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:27:07.411 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:27:08.244 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:27:08.245 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:27:08.245 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Swapped]
+2026-05-07 20:27:08.247 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:27:08.247 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:27:08.247 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Apocalypto]
+2026-05-07 20:27:08.248 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:27:08.248 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:27:08.248 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 20:27:08.249 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:27:08.249 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:27:08.249 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Shawshank Redemption]
+2026-05-07 20:27:11.001 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:27:11.002 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:27:11.036 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:27:12.510 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:27:12.510 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:27:12.511 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:27:13.534 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:27:13.534 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:27:13.536 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-07 20:27:16.199 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:27:16.199 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:27:16.200 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:27:16.200 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:23.672 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:33:23.677 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:33:27.110 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:27.110 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:27.110 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-05-07 20:33:27.111 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:27.112 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:27.112 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-05-07 20:33:27.112 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:27.113 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:27.113 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-05-07 20:33:27.113 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:27.113 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:27.113 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 20:33:27.264 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:33:27.265 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:33:28.325 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:28.325 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:28.325 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-05-07 20:33:28.326 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:28.326 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:28.326 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-05-07 20:33:28.326 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:28.326 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:28.326 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-05-07 20:33:28.327 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:33:28.327 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:33:28.327 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 20:33:28.712 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:33:28.712 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:33:28.731 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id
+) VALUES (
+    ?,
+    ?
+)
+
+2026-05-07 20:33:28.731 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Hoppers]
+2026-05-07 20:33:28.731 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:33:30.932 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:33:30.933 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:33:30.934 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id
+) VALUES (
+    ?,
+    ?
+)
+
+2026-05-07 20:33:30.934 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Project Hail Mary]
+2026-05-07 20:33:30.934 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:33:32.184 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:33:32.185 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:33:32.186 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id
+) VALUES (
+    ?,
+    ?
+)
+
+2026-05-07 20:33:32.186 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Predator: Badlands]
+2026-05-07 20:33:32.186 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:33:35.392 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:33:35.392 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:33:35.393 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:33:35.393 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:38:50.309 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:38:50.312 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:38:50.915 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:38:50.916 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:38:50.916 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Swapped]
+2026-05-07 20:38:50.917 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:38:50.917 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:38:50.917 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Apocalypto]
+2026-05-07 20:38:50.918 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:38:50.918 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:38:50.918 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 20:38:50.918 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:38:50.918 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:38:50.918 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Shawshank Redemption]
+2026-05-07 20:38:52.686 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:38:52.687 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:38:52.705 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id
+) VALUES (
+    ?,
+    ?
+)
+
+2026-05-07 20:38:52.705 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Swapped]
+2026-05-07 20:38:52.705 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:38:54.075 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:38:54.075 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:38:54.076 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id
+) VALUES (
+    ?,
+    ?
+)
+
+2026-05-07 20:38:54.076 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Apocalypto]
+2026-05-07 20:38:54.076 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:38:54.986 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:38:54.986 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:38:54.987 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id
+) VALUES (
+    ?,
+    ?
+)
+
+2026-05-07 20:38:54.987 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Interstellar]
+2026-05-07 20:38:54.987 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:38:57.244 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:38:57.245 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:38:57.248 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:38:57.248 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:03.843 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:39:03.843 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:39:06.459 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:39:06.459 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:39:06.461 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:39:06.461 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.118 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:39:10.119 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:39:10.414 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.414 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.414 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-05-07 20:39:10.415 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.417 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.417 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-05-07 20:39:10.417 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.417 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.417 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-05-07 20:39:10.418 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.418 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.418 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 20:39:10.418 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.418 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.418 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-05-07 20:39:10.419 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.419 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.419 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:39:10.419 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.419 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.419 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-05-07 20:39:10.420 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:39:10.420 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:39:10.420 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-05-07 20:39:11.871 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:39:11.871 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:39:11.872 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id
+) VALUES (
+    ?,
+    ?
+)
+
+2026-05-07 20:39:11.872 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [The Avengers]
+2026-05-07 20:39:11.872 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:39:14.829 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:39:14.829 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:39:14.831 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:39:14.831 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:13.419 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:13.424 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:42:13.456 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:13.456 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.213 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:17.213 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:42:17.772 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.772 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.772 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-05-07 20:42:17.774 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.774 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.774 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-05-07 20:42:17.775 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.775 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.775 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-05-07 20:42:17.775 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.775 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.775 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 20:42:17.776 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.776 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.776 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-05-07 20:42:17.776 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.776 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.776 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:42:17.777 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.777 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.777 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-05-07 20:42:17.777 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.777 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.777 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-05-07 20:42:17.778 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:42:17.778 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:17.778 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Matrix]
+2026-05-07 20:42:18.863 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:18.863 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:42:18.864 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:18.864 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:20.422 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:20.422 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:42:20.423 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:20.423 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:42:22.107 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:22.107 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:42:22.108 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:42:22.108 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.394 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:44:46.397 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:44:46.824 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.825 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.825 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-05-07 20:44:46.826 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.826 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.826 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-05-07 20:44:46.827 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.827 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.827 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-05-07 20:44:46.828 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.828 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.828 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 20:44:46.828 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.828 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.828 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-05-07 20:44:46.829 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.829 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.829 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:44:46.829 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.830 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.830 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-05-07 20:44:46.830 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.830 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.830 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-05-07 20:44:46.831 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:44:46.831 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:44:46.831 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Matrix]
+2026-05-07 20:44:48.523 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:44:48.524 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:44:48.542 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:44:48.542 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:44:48.543 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:44:49.551 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:44:49.551 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:44:49.552 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:44:49.552 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:44:49.552 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:44:53.195 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:44:53.196 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:44:53.197 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:44:53.197 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:44:53.197 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:00.906 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:00.906 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:00.907 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:00.907 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:45:00.907 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:01.594 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:01.595 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:01.596 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:01.596 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:45:01.597 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:01.841 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:01.841 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:01.842 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:01.842 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 20:45:01.842 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:05.941 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:05.941 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:05.942 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:05.942 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Spider-Man: No Way Home]
+2026-05-07 20:45:05.942 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:07.615 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:07.616 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:07.617 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:07.618 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:45:23.977 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:23.978 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:24.327 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:45:24.327 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:45:24.327 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:24.328 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:45:24.328 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:45:24.328 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Gorge]
+2026-05-07 20:45:24.328 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:45:24.328 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:45:24.328 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Titanic]
+2026-05-07 20:45:24.329 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 20:45:24.329 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 20:45:24.329 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hamnet]
+2026-05-07 20:45:25.411 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:25.411 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:25.412 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:25.412 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:25.412 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:36.960 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:36.961 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:36.962 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:36.962 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:36.962 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:44.196 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:44.196 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:44.197 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:44.197 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:44.197 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:53.478 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:53.479 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:53.479 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:53.480 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:53.480 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:53.685 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:53.685 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:53.686 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:53.686 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:53.686 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:56.087 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:56.087 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:56.089 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:56.089 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:56.089 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:45:56.303 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:45:56.303 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:45:56.303 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 20:45:56.304 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Forrest Gump]
+2026-05-07 20:45:56.304 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 20:46:11.836 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:46:11.837 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 20:46:11.838 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 20:46:11.838 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:02:47.338 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:02:47.338 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:02:47.342 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:02:47.342 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:02:47.373 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-07 22:02:47.373 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-07 22:02:47.374 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:02:47.374 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:02:53.525 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:02:53.525 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:02:55.362 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:02:55.362 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:02:55.362 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Frankenstein]
+2026-05-07 22:02:55.362 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:02:55.363 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:02:55.363 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Alien]
+2026-05-07 22:02:55.363 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:02:55.364 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:02:55.364 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Conjuring]
+2026-05-07 22:02:55.364 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:02:55.365 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:02:55.365 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Psycho]
+2026-05-07 22:02:57.042 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:02:57.042 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:02:57.058 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:02:57.059 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Frankenstein]
+2026-05-07 22:02:57.059 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:01.381 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:01.381 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:01.382 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:01.382 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Frankenstein]
+2026-05-07 22:03:01.382 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:04.527 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:04.527 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:04.528 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-07 22:03:04.528 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:11.666 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:11.667 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:12.788 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.788 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.788 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-05-07 22:03:12.789 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.789 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.789 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-05-07 22:03:12.790 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.790 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.790 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-05-07 22:03:12.791 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.791 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.791 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 22:03:12.791 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.791 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.791 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Avengers]
+2026-05-07 22:03:12.792 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.792 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.792 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:12.792 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.792 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.793 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Spider-Man: No Way Home]
+2026-05-07 22:03:12.793 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.793 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.793 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Avengers: Endgame]
+2026-05-07 22:03:12.793 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:03:12.793 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:03:12.794 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [The Matrix]
+2026-05-07 22:03:14.199 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:14.199 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:14.201 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:14.201 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:14.201 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:26.806 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:26.806 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:26.806 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:26.806 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:26.807 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:27.211 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:27.211 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:27.212 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:27.212 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:27.212 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:33.437 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:33.438 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:33.438 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:33.439 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:33.439 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:40.996 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:40.996 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:40.997 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:40.997 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:40.997 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:41.165 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:41.166 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:41.166 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:41.166 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:41.166 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:43.496 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:43.496 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:43.497 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:43.497 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:43.497 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:03:44.712 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:03:44.712 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:03:44.713 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:03:44.713 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Avengers: Infinity War]
+2026-05-07 22:03:44.713 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:04:22.538 DEBUG [main] org.hibernate.SQL - create table films (id integer, original_title varchar(255) not null, user_id bigint not null, primary key (id))
+2026-05-07 22:04:22.657 DEBUG [main] org.hibernate.SQL - create table users (id integer, chat_id bigint not null, name varchar(255) not null, user_tg_id bigint unique, primary key (id))
+2026-05-07 22:04:22.759 DEBUG [main] org.hibernate.SQL - alter table users drop constraint UKba7war9qomtax7gvpfvpoho36
+2026-05-07 22:04:25.689 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:04:25.692 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:04:31.968 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:04:31.970 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:04:39.211 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:04:39.211 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:04:39.229 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - insert into users (chat_id,name,user_tg_id) values (?,?,?)
+2026-05-07 22:04:39.230 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:04:39.230 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iljuha1234]
+2026-05-07 22:04:39.230 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1364198563]
+2026-05-07 22:04:39.233 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select last_insert_rowid()
+2026-05-07 22:04:46.908 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:04:46.909 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:04:47.403 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:04:47.403 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:04:47.403 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Hoppers]
+2026-05-07 22:04:47.404 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:04:47.404 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:04:47.404 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Project Hail Mary]
+2026-05-07 22:04:47.405 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:04:47.405 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:04:47.405 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Predator: Badlands]
+2026-05-07 22:04:47.406 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select case when count(fe1_0.id)>0 then 1 else 0 end from films fe1_0 where fe1_0.user_id=? and fe1_0.original_title=?
+2026-05-07 22:04:47.406 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-07 22:04:47.406 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Interstellar]
+2026-05-07 22:04:49.339 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:04:49.339 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:04:49.354 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (original_title, user_id) VALUES (?, ?)
+2026-05-07 22:04:49.354 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Hoppers]
+2026-05-07 22:04:49.354 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2026-05-07 22:04:59.842 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-07 22:04:59.842 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-07 22:04:59.845 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-07 22:04:59.845 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]

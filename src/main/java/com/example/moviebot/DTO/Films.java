@@ -1,4 +1,4 @@
-package DTO;
+package com.example.moviebot.DTO;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,6 +8,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class Films {
+    private Long id;
     private String original_title;
     private List<String> genre_ids;
     private String overview;

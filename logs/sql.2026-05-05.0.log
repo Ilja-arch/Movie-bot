@@ -1,0 +1,121 @@
+2026-05-05 20:10:40.882 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column original_title varchar(255) not null
+2026-05-05 20:10:40.887 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column user_id bigint not null
+2026-05-05 20:10:40.888 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column chat_id bigint not null
+2026-05-05 20:10:40.889 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column user_tg_id bigint not null
+2026-05-05 20:13:59.980 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column original_title varchar(255) not null
+2026-05-05 20:13:59.984 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column user_id bigint not null
+2026-05-05 20:13:59.985 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column chat_id bigint not null
+2026-05-05 20:13:59.985 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column user_tg_id bigint not null
+2026-05-05 20:14:27.476 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column original_title varchar(255) not null
+2026-05-05 20:14:27.478 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column user_id bigint not null
+2026-05-05 20:14:27.479 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column chat_id bigint not null
+2026-05-05 20:14:27.479 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column user_tg_id bigint not null
+2026-05-05 20:15:55.898 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column original_title varchar(255) not null
+2026-05-05 20:15:55.901 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column user_id bigint not null
+2026-05-05 20:15:55.902 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column chat_id bigint not null
+2026-05-05 20:15:55.902 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column user_tg_id bigint not null
+2026-05-05 20:16:22.609 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column original_title varchar(255) not null
+2026-05-05 20:16:22.612 DEBUG [main] org.hibernate.SQL - 
+    alter table films 
+       add column user_id bigint not null
+2026-05-05 20:16:22.613 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column chat_id bigint not null
+2026-05-05 20:16:22.613 DEBUG [main] org.hibernate.SQL - 
+    alter table users 
+       add column user_tg_id bigint not null
+2026-05-05 20:17:56.907 DEBUG [main] org.hibernate.SQL - create table films (id integer, original_title varchar(255) not null, user_id bigint not null, primary key (id))
+2026-05-05 20:17:56.963 DEBUG [main] org.hibernate.SQL - create table users (id integer, chat_id bigint not null, name varchar(255) not null, user_tg_id bigint not null, primary key (id))
+2026-05-05 20:34:46.485 DEBUG [main] org.hibernate.SQL - create table films (id integer, original_title varchar(255) not null, user_id bigint not null, primary key (id))
+2026-05-05 20:34:46.570 DEBUG [main] org.hibernate.SQL - create table users (id integer, chat_id bigint not null, name varchar(255) not null, user_tg_id bigint not null, primary key (id))
+2026-05-05 20:35:30.130 DEBUG [main] org.hibernate.SQL - create table films (id integer, original_title varchar(255) not null, user_id bigint not null, primary key (id))
+2026-05-05 20:35:30.246 DEBUG [main] org.hibernate.SQL - create table users (id integer, chat_id bigint not null, name varchar(255) not null, user_tg_id bigint not null, primary key (id))
+2026-05-05 20:49:03.003 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 20:49:03.007 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 20:49:03.045 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - insert into users (chat_id,name,user_tg_id) values (?,?,?)
+2026-05-05 20:49:03.047 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 20:49:03.047 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Iljuha1234]
+2026-05-05 20:49:03.047 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1364198563]
+2026-05-05 20:49:03.049 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select last_insert_rowid()
+2026-05-05 20:49:20.661 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 20:49:20.662 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 20:59:05.362 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 20:59:05.366 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 20:59:26.904 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-05 21:00:08.190 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 21:00:08.191 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 21:00:08.194 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-05 21:00:08.194 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-05 21:00:11.422 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-05 21:00:15.371 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 21:00:15.371 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 21:00:15.372 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-05 21:00:15.372 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-05 21:48:22.197 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 21:48:22.197 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 21:48:22.201 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 21:48:22.201 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 21:48:22.223 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-05 21:48:22.223 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-05 21:48:22.223 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-05 21:48:22.224 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-05-05 21:48:53.671 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - INSERT INTO films (
+    original_title,
+    user_id,
+) VALUES (
+    ?,
+    ?,
+)
+
+2026-05-05 21:48:59.557 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select ue1_0.id,ue1_0.chat_id,ue1_0.name,ue1_0.user_tg_id from users ue1_0 where ue1_0.user_tg_id=?
+2026-05-05 21:48:59.558 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1364198563]
+2026-05-05 21:48:59.559 DEBUG [BestMovie4you_bot Telegram Executor] org.hibernate.SQL - select fe1_0.id,fe1_0.original_title,fe1_0.user_id from films fe1_0 where fe1_0.user_id=?
+2026-05-05 21:48:59.559 TRACE [BestMovie4you_bot Telegram Executor] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]

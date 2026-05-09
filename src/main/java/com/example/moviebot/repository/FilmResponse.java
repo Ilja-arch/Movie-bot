@@ -1,6 +1,6 @@
-package repository;
+package com.example.moviebot.repository;
 
-import DTO.Films;
+import com.example.moviebot.DTO.Films;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

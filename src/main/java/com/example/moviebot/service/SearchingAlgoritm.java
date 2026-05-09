@@ -1,18 +1,22 @@
-package service;
+package com.example.moviebot.service;
 
-import DTO.Films;
-import DTO.GenreMapper;
-import repository.*;
+import com.example.moviebot.DTO.Films;
+import com.example.moviebot.DTO.GenreMapper;
+import com.example.moviebot.repository.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class SearchingAlgoritm  {
     private FilmsRepository filmsRepository;
     private List<String> genres;
     private long userId;
-    public void SearchingAlgoritm(FilmsRepository filmsRepository, List<String> genres, long userId) {
+
+
+
+    public  SearchingAlgoritm(FilmsRepository filmsRepository, List<String> genres, long userId) {
         this.filmsRepository = filmsRepository;
         this.genres = genres;
         this.userId = userId;
@@ -29,14 +33,14 @@ public class SearchingAlgoritm  {
                 genIds.add(id);
             }
         }
-        Films[] films = filmRestService.searchMovieByGenre(genIds, 20);
+        Films[] films = filmRestService.searchMovieByGenre(genIds, 50);
         List<Films> recomendList = new ArrayList<>();
         for (Films film : films) {
-            if (film.getVote_average() > 7.5) {
+            if (film.getVote_average() > 7) {
                 if (("en").equals(film.getOriginal_language())) {
                     if (!filmsRepository.isUserWatched(userId,film.getOriginal_title())) {
                         recomendList.add(film);
-                        if (recomendList.size() > 3) {
+                        if (recomendList.size() > 50) {
                             break;
                         }
                     }

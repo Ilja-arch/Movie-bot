@@ -1,4 +1,4 @@
-package DTO;
+package com.example.moviebot.DTO;
 
 import java.util.HashMap;
 import java.util.Map;

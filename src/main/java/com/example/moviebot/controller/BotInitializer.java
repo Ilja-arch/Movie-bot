@@ -1,4 +1,4 @@
-package controller;
+package com.example.moviebot.controller;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
