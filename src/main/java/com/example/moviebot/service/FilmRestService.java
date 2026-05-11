@@ -2,7 +2,7 @@
 package com.example.moviebot.service;
 
 import com.example.moviebot.DTO.Films;
-import com.example.moviebot.repository.FilmResponse;
+import com.example.moviebot.DTO.FilmResponse;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;

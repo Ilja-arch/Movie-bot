@@ -310,10 +310,9 @@ public class MovieBot extends TelegramLongPollingBot {
             send(chatId, "Couldn't find popular films right now.");
             return;
         }
-        String list = popular.stream().limit(5)
-                .map(f -> "• " + f.getOriginal_title())
-                .collect(Collectors.joining("\n"));
-        send(chatId, "🔥 Top 5 This Week:\n" + list);
+        userFilmsList.put(chatId, popular);
+        userFilmIndex.put(chatId, 0);
+        showSearchFilm(chatId);
     }
 
 
