@@ -3,6 +3,7 @@ package com.example.moviebot.config;
 import com.example.moviebot.controller.MovieBot;
 import com.example.moviebot.repository.FilmsRepository;
 import com.example.moviebot.service.FilmsService;
+import lombok.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.TelegramBotsApi;

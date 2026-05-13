@@ -79,7 +79,7 @@ public class FilmRestService {
             JSONObject json = new JSONObject(response.body());
             JSONArray results = json.getJSONArray("results");
 
-            if (!results.isEmpty()) {
+            if (results.length() > 0) {
                 return String.valueOf(results.getJSONObject(0).getInt("id"));
             }
 

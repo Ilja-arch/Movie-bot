@@ -8,9 +8,11 @@ import com.example.moviebot.service.FilmRestService;
 import com.example.moviebot.service.FilmsService;
 import com.example.moviebot.service.SearchingAlgoritm;
 import lombok.RequiredArgsConstructor;
+
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
@@ -22,11 +24,18 @@ import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
 public class MovieBot extends TelegramLongPollingBot {
+
+    @Value("${bot.token}")
+    private String token;
 
     private final FilmsService filmsService;
     private final FilmsRepository filmsRepository;
@@ -38,6 +47,8 @@ public class MovieBot extends TelegramLongPollingBot {
     private final Map<Long, Films> userCurrentFilm = new ConcurrentHashMap<>();
     private final Map<Long, Set<Integer>> userGenres = new ConcurrentHashMap<>();
 
+
+
     @Override
     public String getBotUsername() {
         return "BestMovie4you_bot";
@@ -45,7 +56,7 @@ public class MovieBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "";
+        return token;
     }
 
 
@@ -73,7 +84,7 @@ public class MovieBot extends TelegramLongPollingBot {
                 filmsService.registerUser(tgId, chatId, message.getFrom().getUserName());
                 sendMenu(chatId);
             }
-            case "🔥 Popular" -> sendPopular(chatId);
+            case "🔥 Popular" -> sendPopular(chatId,tgId);
             case "⭐ My films" -> sendSavedList(chatId, tgId);
             case "🎯 Search films" -> {
                 clearUserContext(chatId);
@@ -195,7 +206,7 @@ public class MovieBot extends TelegramLongPollingBot {
                 .map(GenreMapper::getGenreName)
                 .collect(Collectors.toList());
 
-        SearchingAlgoritm algorithm = new SearchingAlgoritm(filmsRepository, genreNames, filmsService.getUserIdByTgId(tgId));
+        SearchingAlgoritm algorithm = new SearchingAlgoritm(filmsRepository,filmRestService ,genreNames, filmsService.getUserIdByTgId(tgId));
         List<Films> results = algorithm.getFilmsForUser();
 
         if (results == null || results.isEmpty()) {
@@ -269,7 +280,7 @@ public class MovieBot extends TelegramLongPollingBot {
 
             InlineKeyboardMarkup markup = new InlineKeyboardMarkup(List.of(
                     List.of(btn("⏭ Next Saved", "NEXT_SAVED")),
-                    List.of(btn("Delete","DELETE"))
+                    List.of(btn("🗑 Delete","DELETE"))
             ));
 
 
@@ -304,13 +315,27 @@ public class MovieBot extends TelegramLongPollingBot {
         sendTextWithMarkup(chatId, "Select genres you like:", markup);
     }
 
-    private void sendPopular(Long chatId) {
+    private void sendPopular(Long chatId,Long tgId) {
         List<Films> popular = filmsService.getPopularFilmsThisWeek();
         if (popular.isEmpty()) {
             send(chatId, "Couldn't find popular films right now.");
             return;
         }
-        userFilmsList.put(chatId, popular);
+        List<Films> films = filmsService.getWatchedFilms(tgId);
+        List<Films> uniqueFilms = new ArrayList<>();
+        boolean isWatched = false;
+        for (Films film1: popular){
+            for (Films film2: films){
+                if(Objects.equals(film1.getOriginal_title(), film2.getOriginal_title())){
+                    isWatched = true;
+                }
+            }
+            if(!isWatched){
+                uniqueFilms.add(film1);
+            }
+            isWatched = false;
+        }
+        userFilmsList.put(chatId, uniqueFilms);
         userFilmIndex.put(chatId, 0);
         showSearchFilm(chatId);
     }

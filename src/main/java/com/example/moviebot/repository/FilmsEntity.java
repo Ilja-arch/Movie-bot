@@ -11,17 +11,18 @@ import lombok.*;
 @Table(name = "films")
 
 public class FilmsEntity {
+
     @Id
-    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "original_title", nullable = false)
     private String originalTitle;
 
-    @Column(nullable = false)
+    @Column(name = "user_id", nullable = false)
     private Long userId;
-}
 
+
+}
 
 
