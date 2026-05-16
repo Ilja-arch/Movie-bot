@@ -81,7 +81,16 @@ public class MovieBot extends TelegramLongPollingBot {
 
         switch (text) {
             case "/start" -> {
-                filmsService.registerUser(tgId, chatId, message.getFrom().getUserName());
+                var user = message.getFrom();
+
+                String name = user.getUserName();
+                if (name == null || name.isBlank()) {
+                    name = user.getFirstName();
+                }
+                if (name == null || name.isBlank()) {
+                    name = String.valueOf(user.getId());
+                }
+                filmsService.registerUser(tgId, chatId, name);
                 sendMenu(chatId);
             }
             case "🔥 Popular" -> sendPopular(chatId,tgId);

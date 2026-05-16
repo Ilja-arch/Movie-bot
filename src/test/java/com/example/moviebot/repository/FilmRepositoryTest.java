@@ -183,11 +183,7 @@ class FilmsRepositoryTest {
     @Test
     @DisplayName("Should verify no interactions when not called")
     void verifyNoInteractions() {
-        // Given - no setup needed
 
-        // When - no method calls
-
-        // Then
         Mockito.verifyNoInteractions(filmsRepository);
     }
 

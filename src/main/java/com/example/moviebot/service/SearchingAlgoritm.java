@@ -42,12 +42,14 @@ public class SearchingAlgoritm {
         }
 
         Films[] films =
-                filmRestService.searchMovieByGenre(genIds, 50);
+                filmRestService.searchMovieByGenre(genIds, 4);
 
         List<Films> recomendList = new ArrayList<>();
 
         for (Films film : films) {
-
+            if (film.getVote_average() == null){
+                continue;
+            }
             if (film.getVote_average() > 7) {
 
                 if ("en".equals(film.getOriginal_language())) {

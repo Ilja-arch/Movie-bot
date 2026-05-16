@@ -21,6 +21,7 @@ public class FilmsService  {
     private final FilmRestService filmRestService;
 
     public void registerUser(long tgId, long chatId, String name) {
+
         userRepository.findByUserTgId(tgId)
                 .ifPresentOrElse(
                         user -> log.info("User already exists: {}", user.getName()),
@@ -65,10 +66,13 @@ public class FilmsService  {
     @Transactional // Обязательно!
     public void saveWatchedFilm(String originalTitle, Long tgId) {
         try {
-            // Сначала находим внутренний ID пользователя
+
             Long internalUserId = getUserIdByTgId(tgId);
 
-            // Передаем именно внутренний ID
+            if (filmsRepository.isUserWatched(internalUserId,originalTitle)){
+                log.info("user watched that!");
+                return;
+            }
             filmsRepository.saveFilm(originalTitle, internalUserId);
             System.out.println("saved");
             log.info("Фильм '{}' успешно сохранен для пользователя {}", originalTitle, tgId);
@@ -82,10 +86,8 @@ public class FilmsService  {
     public List<Films> getPopularFilmsThisWeek() {
         try {
             return filmRestService.getTrendingWeek();
-        } catch (IOException | InterruptedException ex) {
-            log.error("Error fetching trending films", ex);
-            return List.of();
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             log.error("Unexpected error fetching trending films", ex);
             return List.of();
         }

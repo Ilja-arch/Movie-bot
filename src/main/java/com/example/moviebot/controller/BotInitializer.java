@@ -15,6 +15,6 @@ public class BotInitializer {
     @PostConstruct
     public void init() throws Exception {
         TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-        botsApi.registerBot(movieBot);
+       // botsApi.registerBot(movieBot);
     }
 }
